@@ -15,7 +15,7 @@
 ## set permissios for owner to have all privileges, group to read and execute, and no privileges for others.
 # $ chmod 750 /usr/sbin/tcpdump
 
-## add symbolic (-s) link to local binary user path
+## add symbolic (-s) link to point to local binary user path
 # ln -s /usr/sbin/tcpdump /usr/local/bin/tcpdump
 
 ## confirm privileges and symbolic link are set correctly
