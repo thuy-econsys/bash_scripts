@@ -31,10 +31,14 @@
 # getcap /usr/sbin/tcpdump
 # /usr/sbin/tcpdump = cap_net_admin,cap_net_raw+eip
 
+## create directory to store dumps and execute script
+# $ mkdir ~/Documents/tcp-dumps
+# $ ./tcp-dumph.sh <interface>
+
 state=$(cat /sys/class/net/$1/operstate)
 
     if [ $state == "up" ]; then
-        sudo tcpdump -i $1 -nn -w $HOME/Documents/bash_scripts/tcp-dumps/$1-$(date +'%Y%m%d:%H:%M:%S').pcap
+        sudo tcpdump -i $1 -nn -w $HOME/Documents/tcp-dumps/$1-$(date +'%Y%m%d:%H:%M:%S').pcap
     else
         echo "interface $1 state $state at $( date +'%H:%M:%S')"
     fi
