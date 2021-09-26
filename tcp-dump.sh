@@ -24,7 +24,7 @@
 # $ ls -l /usr/local/bin/tcpdump
 # lrwxrwxrwx 1 tcpdump tcpdump 17 Sep 26 17:05 /usr/local/bin/tcpdump -> /usr/sbin/tcpdump
 
-## allow tcpdump to open its raw socket, giving CAP_NET_RAW privileges
+## allow tcpdump to open its raw socket, giving CAP_NET_RAW capabilities
 # $ setcap cap_net_raw=eip /usr/sbin/tcpdump
 
 ## make sure it's set
