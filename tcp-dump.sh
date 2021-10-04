@@ -29,7 +29,7 @@
 
 ## make sure it's set
 # getcap /usr/sbin/tcpdump
-# /usr/sbin/tcpdump = cap_net_admin,cap_net_raw+eip
+# /usr/sbin/tcpdump = cap_net_raw+eip
 
 ## create directory to store dumps and execute script
 # $ mkdir ~/Documents/tcp-dumps
